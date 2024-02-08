@@ -9,10 +9,6 @@ describe("Menu Routes", () => {
     });
   });
 
-  afterAll(async () => {});
-
-  beforeEach(async () => {});
-
   it("should create a new menu", async () => {
     const response = await request(app)
       .post("/menus")
