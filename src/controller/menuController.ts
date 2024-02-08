@@ -26,7 +26,7 @@ export const getAllMenus = async (req: Request, res: Response) => {
 export const getMenuById = async (req: Request, res: Response) => {
   const menuRepository = AppDataSource.getRepository(Menu);
   try {
-    const menu = await menuRepository.findOne(req.params.id);
+    const menu = await menuRepository.findOneBy({ id: req.params.id });
     if (!menu) {
       return res.status(404).json({ message: "Menu not found" });
     }
@@ -39,7 +39,7 @@ export const getMenuById = async (req: Request, res: Response) => {
 export const updateMenu = async (req: Request, res: Response) => {
   const menuRepository = AppDataSource.getRepository(Menu);
   try {
-    const menu = await menuRepository.findOne(req.params.id);
+    const menu = await menuRepository.findOneBy({ id: req.params.id });
     if (!menu) {
       return res.status(404).json({ message: "Menu not found" });
     }
@@ -54,7 +54,7 @@ export const updateMenu = async (req: Request, res: Response) => {
 export const deleteMenu = async (req: Request, res: Response) => {
   const menuRepository = AppDataSource.getRepository(Menu);
   try {
-    const menu = await menuRepository.findOne(req.params.id);
+    const menu = await menuRepository.findOneBy({ id: req.params.id });
     if (!menu) {
       return res.status(404).json({ message: "Menu not found" });
     }
