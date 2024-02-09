@@ -16,10 +16,10 @@ app.put("/menus/:id", menuController.updateMenu);
 app.delete("/menus/:id", menuController.deleteMenu);
 
 // MenuItem routes
-app.get("/menuItems", menuItemController.getAllMenuItems);
-app.get("/menuItems/:id", menuItemController.getMenuItemById);
-app.post("/menuItems", menuItemController.createMenuItem);
-app.put("/menuItems/:id", menuItemController.updateMenuItem);
-app.delete("/menuItems/:id", menuItemController.deleteMenuItem);
+app.get("/menus/:menuId/menu-items", menuItemController.getAllMenuItems);
+app.get("/menu-items/:id", menuItemController.getMenuItemById);
+app.post("/menus/:id/menu-items", menuItemController.createMenuItem);
+app.put("/menu-items/:id", menuItemController.updateMenuItem);
+app.delete("/menu-items/:id", menuItemController.deleteMenuItem);
 
 export { app };
