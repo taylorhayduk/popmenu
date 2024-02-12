@@ -9,9 +9,13 @@ describe("Menu Routes", () => {
     });
   });
 
-  it("should create a new menu", async () => {
+  it("should create a restaurant then a new menu", async () => {
+    const newRestaurant = await request(app)
+      .post("/restaurants")
+      .send({ name: "New Restaurant" });
+
     const response = await request(app)
-      .post("/menus")
+      .post(`/restaurants/${newRestaurant.body.id}/menus`)
       .send({ name: "Burger Menu" });
 
     expect(response.statusCode).toBe(201);
