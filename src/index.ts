@@ -11,6 +11,8 @@ const app = express();
 app.use(express.json());
 
 // Menu routes
+app.post("/restaurants/:id/menus", menuController.createMenuForRestaurant);
+app.get("/restaurants/:id/menus", menuController.getMenusByRestaurantId);
 app.get("/menus", menuController.getAllMenus);
 app.get("/menus/:id", menuController.getMenuById);
 app.put("/menus/:id", menuController.updateMenu);
@@ -29,10 +31,6 @@ app.get("/restaurants/:id", restaurantController.getRestaurantById);
 app.post("/restaurants", restaurantController.createRestaurant);
 app.put("/restaurants/:id", restaurantController.updateRestaurant);
 app.delete("/restaurants/:id", restaurantController.deleteRestaurant);
-
-// Get all menus of a specific restaurant
-app.get("/restaurants/:id/menus", menuController.getMenusByRestaurantId);
-app.post("/restaurants/:id/menus", menuController.createMenuForRestaurant);
 
 // Uploader
 app.post("/upload-json", uploaderController.uploadJsonRoute);
