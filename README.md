@@ -1,4 +1,4 @@
-# Dishing Out Data: Taylor's PopMenu Take-out Project
+# Dishing Out Data: Taylor's Popmenu Take-out Project
 
 Hi Popmenu team! Welcome to Dishing Out Data, a comprehensive backend application designed for managing restaurant menus. As part of my application to Popmenu, this project underscores my commitment to developing scalable, dynamic systems that cater to the ever-evolving needs of the restaurant industry.
 
