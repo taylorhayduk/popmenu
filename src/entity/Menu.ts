@@ -14,7 +14,7 @@ export class Menu {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ unique: true })
+  @Column()
   name: string;
 
   @ManyToOne(() => Restaurant, (restaurant) => restaurant.menus)

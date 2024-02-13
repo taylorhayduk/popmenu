@@ -2,6 +2,7 @@ import express from "express";
 import * as menuController from "./controller/menuController";
 import * as menuItemController from "./controller/menuItemController";
 import * as restaurantController from "./controller/restaurantController";
+import * as uploaderController from "./controller/uploaderController";
 
 // Initialize Express app
 const app = express();
@@ -32,5 +33,8 @@ app.delete("/restaurants/:id", restaurantController.deleteRestaurant);
 // Get all menus of a specific restaurant
 app.get("/restaurants/:id/menus", menuController.getMenusByRestaurantId);
 app.post("/restaurants/:id/menus", menuController.createMenuForRestaurant);
+
+// Uploader
+app.post("/upload-json", uploaderController.uploadJsonRoute);
 
 export { app };
