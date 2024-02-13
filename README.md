@@ -23,7 +23,7 @@ At the heart of "Dishing Out Data" lies an extensible data model, architected to
 
 ### Embracing Test-Driven Development
 
-Our testing strategy employs Jest for test writing and SuperTest for mocking HTTP requests, ensuring comprehensive coverage and reliability. The tests are structured to reboot the in-memory datastore between suites, providing a clean slate for each test cycle. This setup, though initially challenging to implement, has proven invaluable for developing the application in a test-driven manner. Almost all development was guided by the creation and execution of tests, with minimal reliance on tools like Postman for smoke testing.
+My testing strategy employs Jest for test writing and SuperTest for mocking HTTP requests, ensuring comprehensive coverage and reliability. The tests are structured to reboot the in-memory datastore between suites, providing a clean slate for each test cycle. This setup, though initially challenging to implement, has proven invaluable for developing the application in a test-driven manner. Almost all development was guided by the creation and execution of tests, with minimal reliance on tools like Postman for smoke testing.
 
 ## Features
 
@@ -34,10 +34,6 @@ Our testing strategy employs Jest for test writing and SuperTest for mocking HTT
 - **Endpoints**: Defined in `src/index.ts`, this file lists all the endpoints available in the application, serving as the entry point for interacting with the backend system.
 
 - **Database Configuration**: The database is initially configured as an in-memory SQLite instance, detailed in `src/data-source.ts`, to simplify testing and evaluation. For illustrative purposes, the file also includes an example configuration for a more permanent setup. This approach ensures both ease of use for development and a clear path towards deploying a robust database environment.
-
-### Extensible Data Model
-
-The data model is designed to be extensible, allowing for easy addition of new features or changes to existing structures without major overhauls.
 
 ## Improvements for Future Iterations
 
